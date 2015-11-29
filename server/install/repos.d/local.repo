@@ -1,0 +1,5 @@
+[local-net]
+name=yum local-net
+baseurl=file://$path
+enabled=1
+gpgcheck=0

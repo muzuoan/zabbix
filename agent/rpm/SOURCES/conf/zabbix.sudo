@@ -1,0 +1,4 @@
+zabbix ALL =(root)  NOPASSWD: /bin/netstat,/usr/bin/lsscsi,/usr/sbin/ethtool,/usr/sbin/ntpq,/usr/sbin/smartctl,/bin/cat,/usr/bin/du,/usr/bin/iostat
+Defaults:zabbix !requiretty
+
+

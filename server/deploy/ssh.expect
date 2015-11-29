@@ -1,0 +1,16 @@
+#!/usr/bin/expect
+ 
+#Usage sshsudologin.expect <host> <ssh user> <ssh password> <su user> <su password>
+#sshsudologin.expect 172.16.0.60 root hello123 ls
+set timeout 60
+ 
+spawn ssh [lindex $argv 1]@[lindex $argv 0]
+ 
+expect "yes/no" { 
+    send "yes\r"
+    expect "*?assword" { send "[lindex $argv 2]\r" }
+    } "*?assword" { send "[lindex $argv 2]\r" }
+ 
+expect "# " { send "[lindex $argv 3]\r" }
+expect "# " { send "exit\r" }
+interact

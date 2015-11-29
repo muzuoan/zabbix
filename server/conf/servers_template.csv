@@ -1,0 +1,2 @@
+host,ip,port,username,password,root_password,ipmi_ip
+maryland,172.16.0.60,22,user1,xxx,xxx,172.16.0.59

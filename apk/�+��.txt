@@ -1,0 +1,6 @@
+APK比较
+Tabbix  没有图表
+andzabbix-lite 
+ZAX Zabbix Systems Monitoring 图表比较好看推荐
+ZBX Mobile 界面不好看
+

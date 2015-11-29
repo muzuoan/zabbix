@@ -1,0 +1,15 @@
+#!/usr/bin/expect -f
+ 
+#Usage sshsudologin.expect <host> <ssh user> <ssh password> <file> <remotePath>
+set timeout 60
+ 
+spawn scp [lindex $argv 3] [lindex $argv 1]@[lindex $argv 0]:[lindex $argv 4]
+ 
+expect "yes/no" { 
+    send "yes\r"
+    expect "*?assword" { send "[lindex $argv 2]\r" }
+    } "*?assword" { send "[lindex $argv 2]\r" }
+ 
+set timeout 60
+send "exit\r"
+interact
